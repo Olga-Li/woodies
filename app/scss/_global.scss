@@ -1,0 +1,25 @@
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+  //! вместе с height: 100%; и flex для .wrapper  и .main - прижимает всегда footer к низу страницы (чтобы при отсутствии контента footer не склеивался с header)
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
