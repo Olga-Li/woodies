@@ -1,0 +1,9 @@
+# Имя файла .gitignore
+
+# Игнорируется директория в любой директории проекта
+/node_modules
+/vendor
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
