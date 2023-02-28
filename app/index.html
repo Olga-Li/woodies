@@ -5,12 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Woodies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <div class="header__inner">
+        <a class="header__logo" href="#">
+          <img class="header__logo-img" src="img/logo.svg" alt="logo" />
+        </a>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__list-item">
+              <a class="menu__list-link active" href="#">Home</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">About Us</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">How it works </a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">Categories</a>
+            </li>
+            <li class="menu__list-item">
+              <a class="menu__list-link" href="#">Testimony</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__burger">
+          <span></span>
+        </div>
+        <button class="header__btn">
+          <a class="header__btn-link" href="#">Sign up</a>
+        </button>
+      </div>
+    </header>
     <div class="wrapper">
-      <main class="main"></main>
+      <!-- Main -->
+      <main class="main">
+        <!-- Section -- HOME -->
+        <section class="home section">
+          <div class="container">
+            <!-- <div class="petal"></div> -->
+            <div class="home__inner">
+              <div class="home__content">
+                <p class="home__content-text">
+                  Are you looking for <span>woodden furniture</span> for your
+                  place?
+                </p>
+                <h1 class="home__content-title">This is the Right Place</h1>
+                <button class="home__content-btn btn">
+                  <a class="btn__link" href="#">Explore Furniture</a>
+                </button>
+              </div>
+              <div class="home__img">
+                <img
+                  class="home__img-front"
+                  src="img/home-img.png"
+                  alt="image"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section -- About -->
+        <section class="about section">
+          <div class="container">
+            <div class="name-section">
+              <div class="name-section__subtitle">Who we are</div>
+              <h2 class="name-section__title">ABOUT US</h2>
+            </div>
+            <div class="about__inner">
+              <div class="about__img">
+                <img src="img/about-img.png" alt="image" />
+              </div>
+              <div class="about__content about__content-top">
+                <h3 class="about__content-title">
+                  <span>WOODIES</span> is the
+                  <span>home of modern wooden furniture</span>
+                </h3>
+                <p class="about__content-text">
+                  the answer to your need for furniture with shapes, sizes and
+                  colors.
+                </p>
+              </div>
+            </div>
+            <div class="about__content about__content-button">
+              <h3 class="about__content-title">
+                Customized furniture <span>made just for you</span>
+              </h3>
+              <p class="about__content-text">
+                Get it easy to adjust furniture to the shape and size of your
+                dwelling or business.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section -- HOW-IT-WORKS -->
+        <section class="HOW-IT-WORKS section"></section>
+        <section class="CATEGORIES section"></section>
+        <section class="TESTIMONY section"></section>
+      </main>
       <footer class="footer"></footer>
     </div>
 
