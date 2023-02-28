@@ -4,17 +4,8 @@
 @import "reset";
 @import "global";
 
-.header {
-  max-width: 1152px;
-  height: 80px;
-  margin: 0 auto 85px;
-  // position: fixed;
-  width: 100%;
-  // top: 0;
-  left: 0;
-  right: 0;
-  // z-index: 10;
 
+<<<<<<< HEAD
   &__inner {
     padding: 24px 28px 24px 80px;
     display: flex;
@@ -172,6 +163,9 @@
     // max-width: 100%; - позволяем картинке уменьшаться при адаптации
   }
 }
+=======
+
+>>>>>>> parent of 32387e4... 04-Create header and section home
 
 // Section -- About
 .about {

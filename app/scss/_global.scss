@@ -3,41 +3,27 @@ body {
   height: 100%;
 }
 
-body {
-  max-width: 1152px;
-  margin: 0 auto;
-  font-size: 24px;
-  font-weight: 600;
-  font-family: "Nunito", sans-serif;
-  color: $color-base;
-  overflow-x: hidden;
-  min-width: 320px;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  // padding: 85px 0 0 0;
 }
 
 .main {
   flex: 1 0 auto;
-  // flex: flex-grow flex-shrink flex-basis;
-  // Разрешаем расширяться и Запрещаем уменьшаться
 }
 
 .footer {
   flex: 0 0 auto;
-  // Запрещаем этому блоку расширяться или уменьшаться
   //! вместе с height: 100%; и flex для .wrapper  и .main - прижимает всегда footer к низу страницы (чтобы при отсутствии контента footer не склеивался с header)
 }
 
 .container {
-  max-width: 982px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
+<<<<<<< HEAD
 
 .container-fluid {
   // Контейнер не на весь экран (с полями и ограничением на больших экранах)
@@ -121,3 +107,5 @@ body {
     // color: #000000;
   }
 }
+=======
+>>>>>>> parent of 32387e4... 04-Create header and section home
