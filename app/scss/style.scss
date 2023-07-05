@@ -433,4 +433,135 @@
   }
 }
 
+//? Section -- TESTIMONY
+.testimony {
+  &__slider {
+    position: relative;
+  }
+  &__slider-item {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: start;
+  }
+  &__slider-img {
+    width: 240px;
+    height: 320px;
+    border-top-left-radius: 75px;
+    border-bottom-right-radius: 75px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    margin-right: 40px;
+    position: relative;
+  }
+  &__slider-img img {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__slider-info {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 40%;
+    border: 1px solid #a8dcec;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    padding: 49px 13px;
+    gap: 13px;
+    position: relative;
+  }
+  &__slider-text {
+    font-size: 14px;
+    line-height: 19px;
+    color: #3e3f43;
+  }
+
+  &__slider-author {
+    display: flex;
+    align-items: center;
+  }
+  &__slider-author-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.15));
+    margin-right: 8px;
+  }
+  &__slider-author-name {
+    font-size: 12px;
+    line-height: 16px;
+    color: #afafaf;
+  }
+
+  //! -- Rating --
+  .testimony__slider-rating {
+    position: relative;
+    font-size: 24px;
+    width: 136px;
+    /* Размером font-size регулируется размер  звездочки*/
+    display: inline-block;
+  }
+  .testimony__slider-rating::before {
+    display: block;
+    content: "★ ★ ★ ★ ★";
+    /* Звездочка вставляется как символ прямо сюда */
+    /* Это размеро-задающие звезды */
+  }
+  .testimony__rating-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    /* row-reverse мы развернули объекты, теперь порядок input от 1 до 5 */
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  .testimony__rating-item {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    appearance: none;
+    top: 0;
+    left: 0;
+    /* Списком свойств выше убираем сами радио-точки */
+    /* Звездочки при этом остаются */
+  }
+
+  .testimony__rating-label {
+    flex: 0 0 18%;
+    height: 100%;
+    cursor: pointer;
+    color: #fff;
+    /* Это размеро-задающие звезды */
+  }
+
+  .testimony__rating-label::before {
+    /* Создаем поверх другие звезды, которые будут окрашиваться рейтингом */
+    content: "★";
+    display: block;
+    transition: color 0.3s ease 0s;
+  }
+  .testimony__rating-item:checked,
+  .testimony__rating-item:checked ~ .testimony__rating-label {
+    /* Необходимо вывести активные звезды и зафиксировать оценку, т.е выделить звезды на которые кликнули*/
+    color: yellow;
+  }
+  .testimony__rating-label:hover,
+  .testimony__rating-label:hover ~ .testimony__rating-label,
+  .testimony__rating-label:checked ~ .testimony__rating-label:hover {
+    /*  !такая запись вместе с ~ обозначает, что стиль надо применить ко всем следующим объектам. Т.е если навели мышь на 4 звезду, то все предыдущие тоже закрашиваются*/
+    /* именно по этому мы переворачивали элементы input свойством row-reverse*/
+    /* !Все эти манипуляции нужны, т.к. в css нет селектора, который позволяет обратиться напрямую ко всем предыдущим объектам и на самом деле мы обращаемся к следующим*/
+    /* checked показывает, что закрашенные звезды оставлять "включенными" */
+    color: rgb(227, 227, 118);
+  }
+}
+
 @import "media";
