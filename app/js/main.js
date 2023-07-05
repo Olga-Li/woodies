@@ -9,6 +9,25 @@ $(function () {
       2000
     );
 
+    //! burger
+    // Меню бургер (открытие)
+    $(".header__burger").on("click", function (event) {
+      $(".header__burger, .menu__list").toggleClass("active");
+      $(".name-section").addClass("active");
+      $(".overlay").toggleClass("active");
+      $("body").toggleClass("lock");
+
+      // При открытом бургере блокируем прокрутку в body, чтобы при закрытии бургера контент оставался на том же месте, где смотрели до открытия
+    });
+
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      // если пользователь прокрутил страницу более чем на 200px
+      if (scrollY > 200) {
+        $(".name-section").removeClass("active");
+      }
+    });
+    //
     //! slick
     $(".testimony__slider").slick({
       dots: true,
