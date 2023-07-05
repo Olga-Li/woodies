@@ -136,6 +136,11 @@
   .name-section.active {
     padding-top: 90px;
   }
+  .works {
+    &__num {
+      left: 0;
+    }
+  }
   .categories {
     &__item:first-child .categories__item-img {
       left: 0;
@@ -250,6 +255,10 @@
   .works {
     &__inner {
       margin-bottom: 45px;
+    }
+    &__num {
+      font-size: 80px;
+      left: 0;
     }
   }
   .testimony {
@@ -397,6 +406,9 @@
       grid-gap: 20px;
       justify-content: center;
     }
+    &__num {
+      left: 0.2em;
+    }
     &__img {
       margin-bottom: 14px;
     }
@@ -508,6 +520,11 @@
       object-fit: contain;
       left: 70%;
       right: auto;
+    }
+  }
+  .works {
+    &__num {
+      left: -0.2em;
     }
   }
   .testimony {
