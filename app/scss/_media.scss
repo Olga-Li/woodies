@@ -1,51 +1,20 @@
-@media (max-width: 1080px) {
-  .menu {
-    &__list-item {
-      padding: 0 10px;
-    }
-  }
-}
 
-@media (max-width: 960px) {
-  
-}
-
-@media (min-width: 767px) {
-  .home__inner {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    max-height: 720px;
-    height: 100%;
-  }
-  .home__img {
-    flex: 0 0 60%;
-    // Запрещаем блоку под картинку умельшаться и увеличиваться
-    // transform: translate(-100%, 0px);
-    position: relative;
-    padding: 0 0 60.5% 0;
-  }
-  // .home__img::before {
-  //   content: "";
-  //   position: absolute;
-  //   right: 0;
-  //   bottom: 0;
-  //   max-width: 382px;
-  //   width: 100%;
-  //   max-height: 382px;
-  //   height: 100%;
-  //   background-image: url("img/flower.png");
-  //   z-index: 10;
-  // }
-  .home__img img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 5px;
-    right: -6px;
-    object-fit: cover;
-  }
-  .home__content {
-    flex: 0 0 50%;
-  }
-}
+// Десктоп (обычно 1200 и 1600)
+// Планшет на боку (1024)
+// @media only screen and (max-width: 990px){
+// }
+// @media only screen and (max-width: 850px){
+// }
+// @media only screen and (max-width: 767px){
+// }
+// @media only screen and (max-width: 640px){}
+// @media only screen and (max-width: 566px){
+// }
+// @media only screen and (max-width: 489px){
+// }
+// @media only screen and (max-width: 379px){
+// }
+// @media only screen and (max-width: 339px){
+// }
+// @media only screen and (max-width: 299px){
+// }
