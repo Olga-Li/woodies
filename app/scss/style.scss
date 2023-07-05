@@ -564,4 +564,151 @@
   }
 }
 
+//? -- Subscribe --
+.subscribe {
+  // padding: 53px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 174px;
+    margin-bottom: 34px;
+  }
+  &__content {
+    flex: 0 1 50%;
+    color: #000;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  &__form {
+    flex: 0 1 48%;
+    position: relative;
+    z-index: 15;
+    cursor: pointer;
+  }
+
+  &__mail {
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    border: 1px solid $color-button;
+    height: 40px;
+    border-radius: 4px;
+    padding: 9px 16px;
+    &::placeholder {
+      font-family: "Nunito", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: #afafaf;
+      // Повторяем значения для шрифта, т.к. в некоторых браузерах могут не подгружаться значения родителя
+    }
+    &:hover {
+      box-shadow: 0 0 1.5px 1.5px rgba(0, 0, 0, 0.1);
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid $color-button;
+    }
+  }
+  &__btn {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+    background-color: $color-button;
+    border: 1px solid $color-button;
+    padding: 9px 24px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  &__btn:hover {
+    opacity: 0.6;
+  }
+  &__btn:active {
+    transform: scaleX(0.9);
+    right: -6px;
+    top: 0.5px;
+  }
+}
+
+//? -- Footer --
+.footer {
+  margin-top: 120px;
+  &__inner {
+    background-image: linear-gradient(to top, transparent 0%, #fff 100%),
+      url("../img/footer-bg.png");
+    position: relative;
+    background-size: cover;
+    background-repeat: repeat;
+    z-index: 15;
+  }
+
+  & .container {
+    position: relative;
+    &::after {
+      content: "";
+      background-image: linear-gradient(to top, transparent 0%, #fff 100%),
+        url("../img/footer-photo.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 7px;
+      right: -78px;
+      z-index: -3;
+      width: 508px;
+      height: 452px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 708px;
+    border-top: 1px solid #c4c4c4;
+    padding: 24px 0 45px;
+    // position: relative;
+  }
+  &__logo {
+    margin-bottom: 16px;
+  }
+  &__category-link {
+    @extend %footer-category;
+    cursor: pointer;
+  }
+  &__contacts-link,
+  &__subcategory-link {
+    @extend %footer-subcategory;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+  &__subcategory-link:hover {
+    opacity: 0.7;
+    border-bottom: 1px solid #c4c4c4;
+  }
+  &__copyright {
+    @extend %footer-subcategory;
+    text-align: center;
+    padding-bottom: 24px;
+  }
+}
+
 @import "media";
