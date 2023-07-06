@@ -106,7 +106,8 @@
 /* Ограничивающая оболочка */
 .slick-list {
   /* overflow: hidden; позволяет скрыть следующие слайды, чтобы не выглядывали из-за границы экрана */
-  padding-bottom: 63px;
+  // padding-bottom: 63px;
+  padding-bottom: 24px;
 }
 /* Лента слайдов */
 .slick-track {

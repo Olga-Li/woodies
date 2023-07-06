@@ -102,7 +102,6 @@
 
 //? Section -- HOME
 .home {
-  padding-top: 100px;
   position: relative;
   & .container {
     position: relative;
@@ -136,7 +135,7 @@
     // font-size: 72px;
     // line-height: 98px;
     // Адаптивный шрифт
-    font-size: calc(20px + 40 * (100vw / 1152));
+    font-size: calc(20px + 39 * (100vw / 1152));
     line-height: calc(20px + 60 * (100vw / 1152));
   }
   &__content-btn {
@@ -237,7 +236,7 @@
     object-fit: cover;
   }
   &-top__content {
-    flex: 0 1 47%;
+    flex: 0 1 48%;
   }
   &-button__content {
     padding-left: 3px;
@@ -247,10 +246,11 @@
   &-button__content-title {
     margin-bottom: 16px;
     font-weight: 600;
+    letter-spacing: -0.1;
     // font-size: 36px;
     // line-height: 49px;
-    font-size: calc(20px + 16 * (100vw / 1152));
-    line-height: calc(25px + 24 * (100vw / 1152));
+    font-size: calc(20px + 13 * (100vw / 1152));
+    line-height: calc(25px + 20 * (100vw / 1152));
   }
   &-top__content-title span,
   &-button__content-title span {

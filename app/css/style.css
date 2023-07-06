@@ -393,7 +393,7 @@ body {
 /* Ограничивающая оболочка */
 .slick-list {
   /* overflow: hidden; позволяет скрыть следующие слайды, чтобы не выглядывали из-за границы экрана */
-  padding-bottom: 63px;
+  padding-bottom: 24px;
 }
 
 /* Лента слайдов */
@@ -580,7 +580,6 @@ body {
 }
 
 .home {
-  padding-top: 100px;
   position: relative;
 }
 .home .container {
@@ -617,7 +616,7 @@ body {
 .home__content-title {
   margin-bottom: 16px;
   font-weight: 700;
-  font-size: calc(20px + 3.4722222222vw);
+  font-size: calc(20px + 3.3854166667vw);
   line-height: calc(20px + 5.2083333333vw);
 }
 .home__content-btn {
@@ -725,8 +724,8 @@ body {
 }
 .about-top__content {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 47%;
-          flex: 0 1 47%;
+      -ms-flex: 0 1 48%;
+          flex: 0 1 48%;
 }
 .about-button__content {
   padding-left: 3px;
@@ -734,8 +733,9 @@ body {
 .about-top__content-title, .about-button__content-title {
   margin-bottom: 16px;
   font-weight: 600;
-  font-size: calc(20px + 1.3888888889vw);
-  line-height: calc(25px + 2.0833333333vw);
+  letter-spacing: -0.1;
+  font-size: calc(20px + 1.1284722222vw);
+  line-height: calc(25px + 1.7361111111vw);
 }
 .about-top__content-title span, .about-button__content-title span {
   font-weight: 800;
@@ -1461,6 +1461,12 @@ body {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .slick-list {
+    padding-bottom: 63px;
+  }
+  .footer {
+    margin-top: 100px;
+  }
 }
 @media (max-width: 767px) {
   .header__logo {
@@ -1675,7 +1681,6 @@ body {
 @media (max-width: 489px) {
   .section {
     margin-bottom: 0;
-    padding-top: 100px;
   }
   .header__logo {
     -webkit-box-flex: 0;
