@@ -1,10 +1,10 @@
-html{
+html {
   box-sizing: border-box;
 }
 
 *,
 *::after,
-*::before{
+*::before {
   box-sizing: inherit;
 }
 
@@ -46,8 +46,9 @@ button,
 textarea,
 select {
   font: inherit;
+  // Снимаются стили, установленные в браузере и указывается наследование от body
 }
 
-a{
+a {
   text-decoration: none;
 }

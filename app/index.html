@@ -1,20 +1,818 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Woodies</title>
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
-  <header class="header"></header>
-  	<div class="wrapper">
-  		<main class="main"></main>	
-  		<footer class="footer"></footer>
-  	</div>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/main.min.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Woodies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header class="header">
+        <div class="overlay"></div>
+        <div class="header__inner">
+          <a class="header__logo" href="#">
+            <img class="header__logo-img" src="img/logo.svg" alt="logo" />
+          </a>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a
+                  class="menu__list-link active"
+                  data-text="Home"
+                  href="#home"
+                ></a>
+              </li>
+              <li class="menu__list-item">
+                <a
+                  class="menu__list-link"
+                  data-text="About Us"
+                  href="#about"
+                ></a>
+              </li>
+              <li class="menu__list-item">
+                <a
+                  class="menu__list-link"
+                  data-text="How it works"
+                  href="#works"
+                >
+                </a>
+              </li>
+              <li class="menu__list-item">
+                <a
+                  class="menu__list-link"
+                  data-text="Categories"
+                  href="#categories"
+                ></a>
+              </li>
+              <li class="menu__list-item">
+                <a
+                  class="menu__list-link"
+                  data-text="Testimony"
+                  href="#testimony"
+                ></a>
+              </li>
+            </ul>
+          </nav>
+          <button class="header__btn btn-transparent">
+            <a class="header__btn-link" href="#">Sign up</a>
+          </button>
+          <div class="header__burger">
+            <span></span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main -->
+      <main class="main">
+        <!-- Section -- HOME -->
+        <section class="home section" id="home">
+          <div class="container">
+            <!-- <div class="petal"></div> -->
+            <div class="home__inner">
+              <div class="home__content">
+                <p class="home__content-text">
+                  Are you looking for <span>woodden furniture</span> for your
+                  place?
+                </p>
+                <h1 class="home__content-title">This is the Right Place</h1>
+                <button class="home__content-btn btn">
+                  <a class="home__content-link btn__link" href="#"
+                    >Explore Furniture</a
+                  >
+                </button>
+              </div>
+              <div class="home__img">
+                <img
+                  class="home__img-front"
+                  src="img/home-img.png"
+                  alt="image"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section -- About -->
+        <section class="about section" id="about">
+          <div class="container">
+            <!--  -->
+            <div class="about-name name-section">
+              <div class="name-section__subtitle">Who we are</div>
+              <span class="name-section__line"></span>
+              <h2 class="name-section__title">ABOUT US</h2>
+            </div>
+            <!--  -->
+            <div class="about__inner">
+              <!--  -->
+              <div class="about-top">
+                <div class="about-top__img">
+                  <img src="img/about-img.png" alt="image" />
+                </div>
+                <div class="about-top__content">
+                  <h3 class="about-top__content-title">
+                    <span>WOODIES</span> is the
+                    <span>home of modern wooden furniture</span>
+                  </h3>
+                  <p class="about-top__content-text">
+                    the answer to your need for furniture with shapes, sizes and
+                    colors.
+                  </p>
+                </div>
+              </div>
+              <!--  -->
+              <div class="about-button">
+                <div class="about-button__content">
+                  <h3 class="about-button__content-title">
+                    Customized furniture <span>made just for you</span>
+                  </h3>
+                  <p class="about-button__content-text">
+                    Get it easy to adjust furniture to the shape and size of
+                    your dwelling or business.
+                  </p>
+                </div>
+                <div class="about-button__img">
+                  <img src="img/about-furniture.png" alt="image" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section -- HOW-IT-WORKS -->
+        <section class="works section" id="works">
+          <div class="container">
+            <div class="works-name name-section">
+              <div class="name-section__subtitle">How to custom</div>
+              <span class="name-section__line"></span>
+              <h2 class="name-section__title">HOW IT WORKS</h2>
+            </div>
+            <div class="works__inner">
+              <!--  -->
+              <div class="works__item">
+                <div class="works__num">1</div>
+                <div class="works__img">
+                  <img
+                    class="works__icon"
+                    src="img/works-icon1.svg"
+                    alt="icon"
+                  />
+                </div>
+                <div class="works__stages">Choose Design</div>
+              </div>
+              <!--  -->
+              <div class="works__item">
+                <div class="works__num">2</div>
+                <div class="works__img">
+                  <img
+                    class="works__icon"
+                    src="img/works-icon2.svg"
+                    alt="icon"
+                  />
+                </div>
+                <div class="works__stages">Area measuring</div>
+              </div>
+              <!--  -->
+              <div class="works__item">
+                <div class="works__num">3</div>
+                <div class="works__img">
+                  <img
+                    class="works__icon"
+                    src="img/works-icon3.svg"
+                    alt="icon"
+                  />
+                </div>
+                <div class="works__stages">Budgeting</div>
+              </div>
+              <!-- -->
+              <div class="works__item">
+                <div class="works__num">4</div>
+                <div class="works__img">
+                  <img
+                    class="works__icon"
+                    src="img/works-icon4.svg"
+                    alt="icon"
+                  />
+                </div>
+                <div class="works__stages">Production</div>
+              </div>
+            </div>
+            <button class="works__btn btn">
+              <a class="btn__link" href="#">Get Personalized Now</a>
+            </button>
+          </div>
+        </section>
+
+        <!-- Section -- CATEGORIES -->
+        <section class="categories section" id="categories">
+          <div class="container">
+            <div class="categories-name name-section">
+              <div class="name-section__subtitle">What we have</div>
+              <span class="name-section__line"></span>
+              <h2 class="name-section__title">CATEGORIES</h2>
+            </div>
+            <div class="categories__inner">
+              <div class="categories__item shape">
+                <h4 class="categories__item-name">Desk</h4>
+                <a class="categories__item-img">
+                  <img src="img/categories-desk.png" alt="" />
+                </a>
+                <button class="categories__item-btn btn-transparent">
+                  <a class="categories__item-link" href="#">Shop Now</a>
+                </button>
+              </div>
+              <!--  -->
+              <div class="categories__item shape">
+                <h4 class="categories__item-name">Chair</h4>
+                <a class="categories__item-img">
+                  <img src="img/categories-chair.png" alt="" />
+                </a>
+                <button class="categories__item-btn btn-transparent">
+                  <a class="categories__item-link" href="#">Shop Now</a>
+                </button>
+              </div>
+              <!--  -->
+              <div class="categories__item shape">
+                <h4 class="categories__item-name">Kitchenware</h4>
+                <a class="categories__item-img">
+                  <img src="img/categories-kitchenware.png" alt="" />
+                </a>
+                <button class="categories__item-btn btn-transparent">
+                  <a class="categories__item-link" href="#">Shop Now</a>
+                </button>
+              </div>
+              <!--  -->
+              <div class="categories__item shape">
+                <h4 class="categories__item-name">Book Shelf</h4>
+                <a class="categories__item-img">
+                  <img src="img/categories-shelf.png" alt="" />
+                </a>
+                <button class="categories__item-btn btn-transparent">
+                  <a class="categories__item-link" href="#">Shop Now</a>
+                </button>
+              </div>
+              <!--  -->
+              <div class="categories__item shape">
+                <h4 class="categories__item-name">Electronics</h4>
+                <a class="categories__item-img">
+                  <img src="img/categories-electronics.png" alt="" />
+                </a>
+                <button class="categories__item-btn btn-transparent">
+                  <a class="categories__item-link" href="#">Shop Now</a>
+                </button>
+              </div>
+              <!--  -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Section -- TESTIMONY -->
+        <section class="testimony section" id="testimony">
+          <div class="container">
+            <div class="testimony-name name-section">
+              <div class="name-section__subtitle">What they say</div>
+              <span class="name-section__line"></span>
+              <h2 class="name-section__title">testimony</h2>
+            </div>
+
+            <div class="testimony__inner">
+              <div class="testimony__slider">
+                <!--  -->
+                <div class="testimony__slider-item">
+                  <div class="testimony__slider-img">
+                    <img src="img/slider-img1.jpg" alt="image" />
+                  </div>
+
+                  <div class="testimony__slider-img">
+                    <img src="img/slider-img2.jpg" alt="image" />
+                  </div>
+
+                  <div class="testimony__slider-info">
+                    <div class="testimony__slider-rating">
+                      <div class="testimony__rating-inner">
+                        <!-- Звездочки делаем через input type="radio"-->
+                        <!-- !Важно значение value указывать в обратном порядке от 5 -->
+                        <!--  -->
+                        <!-- !Добавляя какому-то input параметр checked можно устанавливать рейтинг (будет окрашиваться соответствующее кол-во звезд и отображаться на экране) -->
+                        <input
+                          id="testimony__rating-5"
+                          class="testimony__rating-item"
+                          name="rating-4"
+                          type="radio"
+                          value="5"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-5"
+                        ></label>
+                        <!--  -->
+                        <input
+                          id="testimony__rating-4"
+                          class="testimony__rating-item"
+                          name="rating-4"
+                          type="radio"
+                          value="4"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-4"
+                        ></label>
+                        <!--  -->
+                        <input
+                          id="testimony__rating-3"
+                          class="testimony__rating-item"
+                          name="rating-4"
+                          type="radio"
+                          value="3"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-3"
+                        ></label>
+                        <!--  -->
+                        <input
+                          id="testimony__rating-2"
+                          class="testimony__rating-item"
+                          name="rating-4"
+                          type="radio"
+                          value="2"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-2"
+                        ></label>
+                        <!--  -->
+                        <input
+                          id="testimony__rating-1"
+                          class="testimony__rating-item"
+                          name="rating-4"
+                          type="radio"
+                          value="1"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-1"
+                        ></label>
+                        <!--  -->
+                      </div>
+                    </div>
+                    <p class="testimony__slider-text">
+                      My experience with WOODIES is a complete success, from
+                      customed furniture, range of product, modern design,
+                      purchasing experience, the delivery and newsletter.
+                      Litterally everything is great. Thank you!
+                    </p>
+                    <div class="testimony__slider-author">
+                      <img
+                        class="testimony__slider-author-photo"
+                        src="img/slider-photo.jpg"
+                        alt="image"
+                      />
+                      <div class="testimony__slider-author-name">
+                        Sandra Dewi <br />
+                        Jakarta Selatan
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="testimony__slider-item">
+                  <div class="testimony__slider-img">
+                    <img src="img/slider-img1.jpg" alt="image" />
+                  </div>
+
+                  <div class="testimony__slider-img">
+                    <img src="img/slider-img2.jpg" alt="image" />
+                  </div>
+                  <div class="testimony__slider-info">
+                    <div class="testimony__slider-rating">
+                      <div class="testimony__rating-inner">
+                        <input
+                          id="testimony__rating-5"
+                          class="testimony__rating-item"
+                          name="rating-3"
+                          type="radio"
+                          value="5"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-5"
+                        ></label>
+                        <!--  -->
+                        <input
+                          id="testimony__rating-4"
+                          class="testimony__rating-item"
+                          name="rating-3"
+                          type="radio"
+                          value="4"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-4"
+                        ></label>
+                        <!--  -->
+                        <input
+                          id="testimony__rating-3"
+                          class="testimony__rating-item"
+                          name="rating-3"
+                          type="radio"
+                          value="3"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-3"
+                        ></label>
+                        <!--  -->
+                        <input
+                          id="testimony__rating-2"
+                          class="testimony__rating-item"
+                          name="rating-3"
+                          type="radio"
+                          value="2"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-2"
+                        ></label>
+                        <!--  -->
+                        <input
+                          id="testimony__rating-1"
+                          class="testimony__rating-item"
+                          name="rating-3"
+                          type="radio"
+                          value="1"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-1"
+                        ></label>
+                        <!--  -->
+                      </div>
+                    </div>
+                    <p class="testimony__slider-text">
+                      My experience with WOODIES is a complete success, from
+                      customed furniture, range of product, modern design,
+                      purchasing experience, the delivery and newsletter.
+                      Litterally everything is great. Thank you!
+                    </p>
+                    <div class="testimony__slider-author">
+                      <img
+                        class="testimony__slider-author-photo"
+                        src="img/slider-photo.jpg"
+                        alt="image"
+                      />
+                      <div class="testimony__slider-author-name">
+                        Sandra Dewi <br />
+                        Jakarta Selatan
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="testimony__slider-item">
+                  <div class="testimony__slider-img">
+                    <img src="img/slider-img1.jpg" alt="image" />
+                  </div>
+
+                  <div class="testimony__slider-img">
+                    <img src="img/slider-img2.jpg" alt="image" />
+                  </div>
+                  <div class="testimony__slider-info">
+                    <div class="testimony__slider-rating">
+                      <div class="testimony__rating-inner">
+                        <input
+                          id="testimony__rating-5"
+                          class="testimony__rating-item"
+                          name="rating-2"
+                          type="radio"
+                          value="5"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-5"
+                        ></label>
+                        <!--  -->
+                        <input
+                          id="testimony__rating-4"
+                          class="testimony__rating-item"
+                          name="rating-2"
+                          type="radio"
+                          value="4"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-4"
+                        ></label>
+                        <!--  -->
+                        <input
+                          id="testimony__rating-3"
+                          class="testimony__rating-item"
+                          name="rating-2"
+                          type="radio"
+                          value="3"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-3"
+                        ></label>
+                        <!--  -->
+                        <input
+                          id="testimony__rating-2"
+                          class="testimony__rating-item"
+                          name="rating-2"
+                          type="radio"
+                          value="2"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-2"
+                        ></label>
+                        <!--  -->
+                        <input
+                          id="testimony__rating-1"
+                          class="testimony__rating-item"
+                          name="rating-2"
+                          type="radio"
+                          value="1"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-1"
+                        ></label>
+                        <!--  -->
+                      </div>
+                    </div>
+                    <p class="testimony__slider-text">
+                      My experience with WOODIES is a complete success, from
+                      customed furniture, range of product, modern design,
+                      purchasing experience, the delivery and newsletter.
+                      Litterally everything is great. Thank you!
+                    </p>
+                    <div class="testimony__slider-author">
+                      <img
+                        class="testimony__slider-author-photo"
+                        src="img/slider-photo.jpg"
+                        alt="image"
+                      />
+                      <div class="testimony__slider-author-name">
+                        Sandra Dewi <br />
+                        Jakarta Selatan
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="testimony__slider-item">
+                  <div class="testimony__slider-img">
+                    <img src="img/slider-img1.jpg" alt="image" />
+                  </div>
+
+                  <div class="testimony__slider-img">
+                    <img src="img/slider-img2.jpg" alt="image" />
+                  </div>
+
+                  <div class="testimony__slider-info">
+                    <div class="testimony__slider-rating">
+                      <div class="testimony__rating-inner">
+                        <input
+                          id="testimony__rating-5"
+                          class="testimony__rating-item"
+                          name="rating-1"
+                          type="radio"
+                          value="5"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-5"
+                        ></label>
+                        <!--  -->
+                        <input
+                          id="testimony__rating-4"
+                          class="testimony__rating-item"
+                          name="rating-1"
+                          type="radio"
+                          value="4"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-4"
+                        ></label>
+                        <!--  -->
+                        <input
+                          id="testimony__rating-3"
+                          class="testimony__rating-item"
+                          name="rating-1"
+                          type="radio"
+                          value="3"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating"
+                        ></label>
+                        <!--  -->
+                        <input
+                          id="testimony__rating-2"
+                          class="testimony__rating-item"
+                          name="rating-1"
+                          type="radio"
+                          value="2"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-2"
+                        ></label>
+                        <!--  -->
+                        <input
+                          id="testimony__rating-1"
+                          class="testimony__rating-item"
+                          name="rating-1"
+                          type="radio"
+                          value="1"
+                        />
+                        <label
+                          class="testimony__rating-label"
+                          for="testimony__rating-1"
+                        ></label>
+                        <!--  -->
+                      </div>
+                    </div>
+                    <p class="testimony__slider-text">
+                      My experience with WOODIES is a complete success, from
+                      customed furniture, range of product, modern design,
+                      purchasing experience, the delivery and newsletter.
+                      Litterally everything is great. Thank you!
+                    </p>
+                    <div class="testimony__slider-author">
+                      <img
+                        class="testimony__slider-author-photo"
+                        src="img/slider-photo.jpg"
+                        alt="image"
+                      />
+                      <div class="testimony__slider-author-name">
+                        Sandra Dewi <br />
+                        Jakarta Selatan
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="container">
+            <!-- Subscribe -->
+            <div class="subscribe">
+              <div class="subscribe__inner">
+                <div class="subscribe__content">
+                  <h6 class="subscribe__title">Subscribe to our newsletter</h6>
+                  <p class="subscribe__text">
+                    A monthly digest of the new WOODIES products, hot offers,
+                    and resources.
+                  </p>
+                </div>
+                <form class="subscribe__form">
+                  <!-- <form class="subscribe__form" method="get"> -->
+                  <input
+                    class="subscribe__mail"
+                    type="email"
+                    name="mail"
+                    placeholder="Your email address"
+                    pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|by|ru|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b$"
+                    title="xxxx@xxxxx.xxx"
+                    required
+                  />
+                  <button class="subscribe__btn" type="submit">
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+            <!--  -->
+            <div class="footer__info">
+              <div class="footer__item footer__contacts">
+                <a class="footer__logo" href="#">
+                  <img class="footer__logo-img" src="img/logo.svg" alt="logo" />
+                </a>
+                <ul class="footer__contacts-list">
+                  <li class="footer__contacts-item">
+                    <a
+                      class="footer__contacts-link footer__contacts-link--phone"
+                      href="tel:0128967453"
+                      >(012) 8967453</a
+                    >
+                  </li>
+                  <li class="footer__contacts-item">
+                    <a
+                      class="footer__contacts-link footer__contacts-link--email"
+                      href="mailto: woodies@gmail.com"
+                      >woodies@gmail.com</a
+                    >
+                  </li>
+                  <li class="footer__contacts-item">
+                    <a
+                      class="footer__contacts-link footer__contacts-link--place"
+                      href="#"
+                      >Jakarta, Indonesia</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!--  -->
+              <div class="footer__item footer__menu">
+                <h5 class="footer__category">
+                  <a class="footer__category-link" href="#">Product</a>
+                </h5>
+                <ul class="footer__list">
+                  <li class="footer__subcategory">
+                    <a class="footer__subcategory-link" href="#">Furnitures</a>
+                  </li>
+                  <li class="footer__subcategory">
+                    <a class="footer__subcategory-link" href="#">Packages</a>
+                  </li>
+                  <li class="footer__subcategory">
+                    <a class="footer__subcategory-link" href="#">Services</a>
+                  </li>
+                </ul>
+              </div>
+              <!--  -->
+              <div class="footer__item footer__menu">
+                <h5 class="footer__category">
+                  <a class="footer__category-link" href="#">Resources</a>
+                </h5>
+                <ul class="footer__list">
+                  <li class="footer__subcategory">
+                    <a class="footer__subcategory-link" href="#">Blog</a>
+                  </li>
+                  <li class="footer__subcategory">
+                    <a class="footer__subcategory-link" href="#">FAQs</a>
+                  </li>
+                  <li class="footer__subcategory">
+                    <a class="footer__subcategory-link" href="#">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+              <!--  -->
+              <div class="footer__item footer__menu">
+                <h5 class="footer__category">
+                  <a class="footer__category-link" href="#">Company</a>
+                </h5>
+                <ul class="footer__list">
+                  <li class="footer__subcategory">
+                    <a class="footer__subcategory-link" href="#">About Us</a>
+                  </li>
+                  <li class="footer__subcategory">
+                    <a class="footer__subcategory-link" href="#">Jobs</a>
+                  </li>
+                  <li class="footer__subcategory">
+                    <a class="footer__subcategory-link" href="#">Our Team</a>
+                  </li>
+                </ul>
+              </div>
+              <!--  -->
+              <div class="footer__item footer__social">
+                <h5 class="footer__category">
+                  <a class="footer__category-link" href="#">Follow Us</a>
+                </h5>
+                <ul class="footer__list">
+                  <li class="footer__subcategory">
+                    <a class="footer__subcategory-link" href="#">Facebook</a>
+                  </li>
+                  <li class="footer__subcategory">
+                    <a class="footer__subcategory-link" href="#">Instagram</a>
+                  </li>
+                  <li class="footer__subcategory">
+                    <a class="footer__subcategory-link" href="#">Twitter</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--  -->
+
+            <div class="footer__copyright">© 2020 WOODIES</div>
+          </div>
+        </div>
+      </footer>
+      <button class="btn-up btn-up_hide"></button>
+    </div>
+
+    <script
+      defer
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
+    <script defer src="js/main.min.js"></script>
+  </body>
 </html>

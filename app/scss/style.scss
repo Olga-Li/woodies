@@ -1,10 +1,715 @@
 @import "vars";
-@import "libs";
-@import "fonts";
 @import "reset";
 @import "global";
+@import "slick.scss";
+// @import "libs";
+// @import "fonts";
 
+//?  Header --
+.header {
+  position: fixed;
+  max-width: 1152px;
+  height: 80px;
+  margin: 0 auto 85px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 18;
 
+  &__inner {
+    padding: 24px 28px 24px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    flex: 0 0 193px;
+    margin-right: 87px/982px * 100%;
+  }
+  &__burger {
+    display: none;
+  }
+  &__btn {
+    width: 137px;
+    height: 40px;
+    border-radius: 8px;
+    margin-left: 24px;
+  }
+  &__btn-link {
+    color: $color-title;
+    font-size: 16px;
+    line-height: 40px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}
+.menu {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__list-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__list-link {
+    display: block;
+    color: $color-menu;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    white-space: nowrap;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease 0s;
+    margin: 0 1.35vw;
+    position: relative;
+    text-align: center;
+  }
+  &__list-link:hover {
+    border-bottom: 2px solid $color-button;
+  }
+  &__list-link:active,
+  &__list-link.active {
+    font-weight: 800;
+    color: $color-button;
+  }
+  &__list-link::before,
+  &__list-link::after {
+    content: attr(data-text) / "";
+  }
+  &__list-link::before {
+    font-weight: 800;
+    visibility: hidden;
+  }
+  &__list-link::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &__list-link:active::before {
+    visibility: visible;
+  }
+  &__list-link:active::after {
+    display: none;
+  }
+}
 
+//? Section -- HOME
+.home {
+  position: relative;
+  & .container {
+    position: relative;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-height: 720px;
+    height: 100%;
+    padding: 46px 0 65px;
+  }
+  &__content {
+    flex: 0 0 50%;
+    // Запрещаем этому блоку расширяться или уменьшаться и задаем размер на 50% ширины
+    padding-top: 57px;
+    width: 100%;
+  }
+  &__content-text {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: calc(14px + 16 * (100vw / 1152));
+    line-height: calc(16px + 24 * (100vw / 1152));
+  }
+  &__content-text span {
+    font-weight: 700;
+  }
+  &__content-title {
+    margin-bottom: 16px;
+    font-weight: 700;
+    // font-size: 72px;
+    // line-height: 98px;
+    // Адаптивный шрифт
+    font-size: calc(20px + 39 * (100vw / 1152));
+    line-height: calc(20px + 60 * (100vw / 1152));
+  }
+  &__content-btn {
+    width: 175px;
+    height: 50px;
+    line-height: 40px;
+  }
+  &__img {
+    display: block;
+    flex: 0 0 60%;
+    // Запрещаем блоку под картинку уменьшаться и увеличиваться
+    position: relative;
+    padding: 0 0 60.5% 0;
+  }
+  &__img::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -5px;
+    top: -165px;
+    width: 65%;
+    height: 140%;
+    border-bottom-left-radius: 120px;
+    background-color: #f9bdbd;
+    z-index: -2;
+  }
+  &__img::after {
+    content: "";
+    position: absolute;
+    left: -62px;
+    bottom: -50px;
+    width: 70%;
+    height: 68%;
+    background-image: url("../img/flower.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  &__img img {
+    max-width: 100%;
+    // max-width: 100%; - позволяем картинке уменьшаться при адаптации
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 5px;
+    right: -6px;
+    object-fit: cover;
+  }
+}
+
+//? Section -- About
+.about {
+  position: relative;
+  & .container {
+    position: relative;
+  }
+
+  &-top,
+  &-button {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+  }
+  &-top {
+    margin-bottom: 43px;
+  }
+  &-top::before {
+    content: "";
+    position: absolute;
+    left: -172px;
+    top: 252px;
+    max-width: 394px;
+    width: 100%;
+    max-height: 390px;
+    height: 100%;
+    background-image: url("../img/flower.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+  &-top__img {
+    flex: 0 1 45%;
+    position: relative;
+    padding-top: 41%;
+  }
+  &-top__img img {
+    display: block;
+    max-width: 100%;
+    max-height: 388px;
+    // max-width: 100%; - позволяем картинке уменьшаться при адаптации
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  &-top__content {
+    flex: 0 1 48%;
+  }
+  &-button__content {
+    padding-left: 3px;
+  }
+
+  &-top__content-title,
+  &-button__content-title {
+    margin-bottom: 16px;
+    font-weight: 600;
+    letter-spacing: -0.1;
+    // font-size: 36px;
+    // line-height: 49px;
+    font-size: calc(20px + 13 * (100vw / 1152));
+    line-height: calc(25px + 20 * (100vw / 1152));
+  }
+  &-top__content-title span,
+  &-button__content-title span {
+    font-weight: 800;
+  }
+  &__content-top .about__content-title {
+    color: $color-title;
+  }
+  &__content-top .about__content-title span:first-child {
+    text-transform: uppercase;
+  }
+  &__content-button {
+    max-width: 651px;
+    width: 100%;
+  }
+  &-button__img {
+    flex: 0 1 40%;
+    position: relative;
+    padding-top: 40%;
+  }
+  &-button__img img {
+    display: block;
+    max-width: 100%;
+    max-height: 384px;
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: -2px;
+    right: -98px;
+    object-fit: cover;
+  }
+}
+
+//? Section -- Works
+.works {
+  &-name {
+    margin-bottom: 64px;
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0px;
+    margin-bottom: 64px;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__num {
+    font-size: 96px;
+    line-height: 131px;
+    color: rgba(249, 189, 189, 0.25);
+    position: absolute;
+    top: 24px;
+    // left: 20px;
+    left: 0.2em;
+  }
+  &__img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  &__icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  &__stages {
+    // font-size: 24px;
+    // line-height: 33px;
+    font-size: calc(18px + 6 * (100vw / 1152));
+    line-height: calc(20px + 13 * (100vw / 1152));
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+  }
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
+  &__btn .btn__link {
+    display: block;
+    padding: 14px 17px;
+    line-height: 22px;
+  }
+}
+
+//? Section -- CATEGORIES
+.categories {
+  &__inner {
+    display: grid;
+    grid-gap: 40px 57px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(328px, 1fr));
+    justify-content: center;
+    z-index: -4;
+  }
+  &__item {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 3;
+  }
+  &__item:nth-child(1),
+  &__item:nth-child(4),
+  &__item:nth-child(3n + 4) {
+    background-color: #f9bdbd;
+  }
+  &__item:nth-child(2),
+  &__item:nth-child(3n + 2) {
+    background-color: #f7dea6;
+  }
+  &__item:nth-child(3),
+  &__item:nth-child(3n + 3) {
+    background-color: #a8dcec;
+  }
+  &__item-name {
+    margin: 24px 16px 26px;
+    // Шрифт наследуется от body (можно не указывать здесь
+    font-weight: 800;
+    color: $color-title;
+  }
+  &__item-img:not(.categories__item:first-child .categories__item-img) {
+    align-self: center;
+    padding: 0 22px;
+  }
+  &__item:first-child .categories__item-img {
+    padding-right: 34px;
+    left: -16px;
+  }
+  &__item-img {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    // max-width: 246px;
+    // max-height: 235px;
+    max-width: 15.375em;
+    max-height: 14.6875em;
+    width: 100%;
+    height: 100%;
+    // object-fit: cover;
+  }
+  &__item-img::before {
+    content: "";
+    display: block;
+    padding-top: 82%;
+  }
+  &__item-img img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__item-btn {
+    border-radius: 4px;
+    align-self: flex-end;
+    margin: 18px 16px 24px;
+    padding: 3px 18px;
+    z-index: 10;
+  }
+  &__item-link {
+    // font-size: 18px;
+    // line-height: 25px;
+    font-size: calc(16px + 2 * (100vw / 1152));
+    line-height: calc(20px + 7 * (100vw / 1152));
+    color: $color-title;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+//? Section -- TESTIMONY
+.testimony {
+  &__slider {
+    position: relative;
+  }
+  &__slider-item {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: start;
+  }
+  &__slider-img {
+    width: 240px;
+    height: 320px;
+    border-top-left-radius: 75px;
+    border-bottom-right-radius: 75px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    margin-right: 40px;
+    position: relative;
+  }
+  &__slider-img img {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__slider-info {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 40%;
+    border: 1px solid #a8dcec;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    padding: 49px 13px;
+    gap: 13px;
+    position: relative;
+  }
+  &__slider-text {
+    font-size: 14px;
+    line-height: 19px;
+    color: #3e3f43;
+  }
+
+  &__slider-author {
+    display: flex;
+    align-items: center;
+  }
+  &__slider-author-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.15));
+    margin-right: 8px;
+  }
+  &__slider-author-name {
+    font-size: 12px;
+    line-height: 16px;
+    color: #afafaf;
+  }
+
+  //! -- Rating --
+  .testimony__slider-rating {
+    position: relative;
+    font-size: 24px;
+    width: 136px;
+    /* Размером font-size регулируется размер  звездочки*/
+    display: inline-block;
+  }
+  .testimony__slider-rating::before {
+    display: block;
+    content: "★ ★ ★ ★ ★";
+    /* Звездочка вставляется как символ прямо сюда */
+    /* Это размеро-задающие звезды */
+  }
+  .testimony__rating-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    /* row-reverse мы развернули объекты, теперь порядок input от 1 до 5 */
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  .testimony__rating-item {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    appearance: none;
+    top: 0;
+    left: 0;
+    /* Списком свойств выше убираем сами радио-точки */
+    /* Звездочки при этом остаются */
+  }
+
+  .testimony__rating-label {
+    flex: 0 0 18%;
+    height: 100%;
+    cursor: pointer;
+    color: #fff;
+    /* Это размеро-задающие звезды */
+  }
+
+  .testimony__rating-label::before {
+    /* Создаем поверх другие звезды, которые будут окрашиваться рейтингом */
+    content: "★";
+    display: block;
+    transition: color 0.3s ease 0s;
+  }
+  .testimony__rating-item:checked,
+  .testimony__rating-item:checked ~ .testimony__rating-label {
+    /* Необходимо вывести активные звезды и зафиксировать оценку, т.е выделить звезды на которые кликнули*/
+    color: yellow;
+  }
+  .testimony__rating-label:hover,
+  .testimony__rating-label:hover ~ .testimony__rating-label,
+  .testimony__rating-label:checked ~ .testimony__rating-label:hover {
+    /*  !такая запись вместе с ~ обозначает, что стиль надо применить ко всем следующим объектам. Т.е если навели мышь на 4 звезду, то все предыдущие тоже закрашиваются*/
+    /* именно по этому мы переворачивали элементы input свойством row-reverse*/
+    /* !Все эти манипуляции нужны, т.к. в css нет селектора, который позволяет обратиться напрямую ко всем предыдущим объектам и на самом деле мы обращаемся к следующим*/
+    /* checked показывает, что закрашенные звезды оставлять "включенными" */
+    color: rgb(227, 227, 118);
+  }
+}
+
+//? -- Subscribe --
+.subscribe {
+  // padding: 53px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 174px;
+    margin-bottom: 34px;
+  }
+  &__content {
+    flex: 0 1 50%;
+    color: #000;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  &__form {
+    flex: 0 1 48%;
+    position: relative;
+    z-index: 15;
+    cursor: pointer;
+  }
+
+  &__mail {
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    border: 1px solid $color-button;
+    height: 40px;
+    border-radius: 4px;
+    padding: 9px 16px;
+    &::placeholder {
+      font-family: "Nunito", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: #afafaf;
+      // Повторяем значения для шрифта, т.к. в некоторых браузерах могут не подгружаться значения родителя
+    }
+    &:hover {
+      box-shadow: 0 0 1.5px 1.5px rgba(0, 0, 0, 0.1);
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid $color-button;
+    }
+  }
+  &__btn {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+    background-color: $color-button;
+    border: 1px solid $color-button;
+    padding: 9px 24px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  &__btn:hover {
+    opacity: 0.6;
+  }
+  &__btn:active {
+    transform: scaleX(0.9);
+    right: -6px;
+    top: 0.5px;
+  }
+}
+
+//? -- Footer --
+.footer {
+  margin-top: 120px;
+  &__inner {
+    background-image: linear-gradient(to top, transparent 0%, #fff 100%),
+      url("../img/footer-bg.png");
+    position: relative;
+    background-size: cover;
+    background-repeat: repeat;
+    z-index: 15;
+  }
+
+  & .container {
+    position: relative;
+    &::after {
+      content: "";
+      background-image: linear-gradient(to top, transparent 0%, #fff 100%),
+        url("../img/footer-photo.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 7px;
+      right: -78px;
+      z-index: -3;
+      width: 508px;
+      height: 452px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 708px;
+    border-top: 1px solid #c4c4c4;
+    padding: 24px 0 45px;
+    // position: relative;
+  }
+  &__logo {
+    margin-bottom: 16px;
+  }
+  &__category-link {
+    @extend %footer-category;
+    cursor: pointer;
+  }
+  &__contacts-link,
+  &__subcategory-link {
+    @extend %footer-subcategory;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+  &__subcategory-link:hover {
+    opacity: 0.7;
+    border-bottom: 1px solid #c4c4c4;
+  }
+  &__copyright {
+    @extend %footer-subcategory;
+    text-align: center;
+    padding-bottom: 24px;
+  }
+}
 
 @import "media";

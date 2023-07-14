@@ -25,17 +25,6 @@ function browserSync() {
   });
 }
 
-//? Функция подключения normalize.css
-// function normalize() {
-//   return src([
-//     "./node_modules/normalize.css/normalize.css",
-//     "./node_modules/fullpage.js/dist/fullpage.css",
-//   ])
-//     .pipe(concat("_libs.scss"))
-//     .pipe(dest("./app/scss"))
-//     .pipe(browsersync.stream());
-// }
-
 //? Функция конвертации из scss в css
 function styles() {
   return (
@@ -61,9 +50,7 @@ function styles() {
 //? Функция обработки скриптов
 function scripts() {
   return src([
-    // "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/slick-carousel/slick/slick.js",
-    // "./node_modules/mixitup/dist/mixitup.js",
     "./app/js/main.js",
   ])
     .pipe(concat("main.min.js"))
