@@ -2,12 +2,25 @@ $(function () {
   $(document).ready(function () {
     // console.log("Готов!");
     //! переход на 1 секцию при перезагрузке (плавный скролл)
+
     $("html, body").animate(
       {
         scrollTop: $("#home").offset().top,
       },
-      2000
+      2000,
+      function () {
+        window.location.href =
+          window.location.protocol +
+          "//" +
+          window.location.host +
+          window.location.pathname +
+          "#home";
+      }
     );
+
+    // window.location.hash = "#home";
+    // window.location.href = 'https//snipp.ru';
+    // window.location.href = window.location.protocol + "//" + window.location.host + window.location.pathname + "#home";
 
     //! burger
     // Меню бургер (открытие)
@@ -157,8 +170,18 @@ const btnUp = {
         left: 0,
         behavior: "smooth",
       });
+      setTimeout(changeHash, 500);
     };
   },
 };
+
+function changeHash() {
+  return (window.location.href =
+    window.location.protocol +
+    "//" +
+    window.location.host +
+    window.location.pathname +
+    "#home");
+}
 
 btnUp.addEventListener();
